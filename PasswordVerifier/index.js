@@ -30,7 +30,13 @@ class PasswordVerifier1 {
   }
 }
 
+const oneUpperCaseRule = (input) => ({
+  passed: (input.toLowerCase() !== input),
+  reason: "at least one upeer case needed"
+})
+
 module.exports = {
   verifyPassword,
-  PasswordVerifier1
+  PasswordVerifier1,
+  oneUpperCaseRule
 }
