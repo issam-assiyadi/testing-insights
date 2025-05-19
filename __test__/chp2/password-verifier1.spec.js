@@ -9,7 +9,7 @@ describe("PasswordVerifier1", () => {
 
     beforeEach(() => {
       // GIVEN
-      fakeRule = (input) => ({ passed: false, reason: "fake reason" });
+      const fakeRule = () => ({ passed: false, reason: "fake reason" });
       verifier.addRule(fakeRule);
 
       // WHEN
