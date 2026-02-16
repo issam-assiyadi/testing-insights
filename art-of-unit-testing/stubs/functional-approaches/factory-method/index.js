@@ -1,8 +1,8 @@
 const { SUNDAY, SATURDAY } = require("../../../constants");
 
 // here we will use a factory method
-const makeVerifier = (rules, dayOfWeekFn) => {
-  return (rules) => {
+const makeVerifier = (inputs, rules, dayOfWeekFn) => {
+  return (inputs, rules) => {
     if ([SUNDAY, SATURDAY].includes(dayOfWeekFn())) {
       throw Error("It's the weekend");
     }

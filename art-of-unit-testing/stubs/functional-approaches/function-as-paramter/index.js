@@ -17,7 +17,7 @@ module.exports = {
 }
 
 /*
-As we can see, adding a `getDayFn` callback as a parameter to the `verifyPassword`
+As we can see, adding a `getDayFn` function as a parameter to the `verifyPassword`
 function solves the issue — it allows us to inject and control the current day during testing.
 
 However, this comes at the cost of readability. The `getDayFn` parameter is unrelated
